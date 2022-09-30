@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>
+        WA Assignment - 6
+    </title>
+ </head>
+<body>
+<h1>Musician guess by Navya Sri Gudla</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="musician_name">Enter the secret musician name</label>
+    <input type="password" id="musician_name" value="John Lennon" >
+<br>
+    <label for="guess_musician_name">Guess the musician</label>
+    <input type="text" id="guess_musician_name">
+<br>
+
+
+    <input type="button" value="Check the guess" onclick="checkGuess()">
+    <br>
+    <br>  
+</form>
+
+
+
+<p id="result"></p>
+
+<script> 
+correct=0;
+wrong=0;
+
+function checkGuess(){
+    console.log("Getting form values")
+    name = document.getElementById("musician_name").value
+    guess = document.getElementById("guess_musician_name").value
+   
+    output= document.getElementById("result")
+    if(guess==musician_name){
+        correct=correct + 1
+        output.innerHTML = "correct - "+correct+","+"wrong - "+wrong
+        alert("You got it right")
+    } 
+    else {
+        wrong = wrong + 1
+        output.innerHTML = "correct - "+correct+","+"wrong - "+wrong
+        alert("Wrong Musician")
+    }
+
+}
+function resolveForm (){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+
+</body>
+</html> 
