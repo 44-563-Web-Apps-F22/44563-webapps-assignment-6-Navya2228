@@ -15,7 +15,7 @@
     <label for="form1_nick">Enter the discount percentage.  </label>
     <input type ="text" id="form1_nick" name="form1_nick" value=10 autofocus> <br>
 
-    <input type="button" onclick="discount()" value="Apply discount">
+    <input type="button" class="btn btn-dark" onclick="discount()" value="Apply discount">
 </form>
 
 
@@ -33,7 +33,7 @@
        value="exponent">
     <label for="power">**</label></br>
 
-    <input type="button" onclick="chooseOp()" value="Get values from radio group">
+    <input type="button" class="btn btn-dark" onclick="chooseOp()" value="Get values from radio group">
   </form>
   <p id="output">This text will be replaced</p>
 
@@ -63,12 +63,12 @@
     console.log("Getting input")
     base = document.getElementById("form1_age").value
     discount = document.getElementById("form1_nick").value
-    let result1="Discounted amounts for base "+base+" are ";
+    let r="Discounted amounts for base "+base+" are ";
     for(i=1; i<6 ; i++){
-        result1=result1+((i*base)-(i*base*discount)/100)+" ";
+        r=r+((i*base)-(i*base*discount)/100)+" ";
     }
     out = document.getElementById("result")
-    out.innerHTML = result1
+    out.innerHTML = r
 }
  </script>
 </body>
